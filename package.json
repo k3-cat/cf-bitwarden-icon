@@ -1,0 +1,17 @@
+{
+  "name": "cf-bitwarden-icon",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types ./types/worker-configuration.d.ts --env-interface CloudflareBindings",
+    "postdeploy": "pnpm sentry:sourcemaps"
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "hono": "^4.9.10"
+  },
+  "devDependencies": {
+    "wrangler": "^4.4.0"
+  }
+}
